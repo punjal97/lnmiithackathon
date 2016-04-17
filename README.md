@@ -28,9 +28,9 @@ Then clone the repository and running the django server
 ```sh
 $ git clone ***copy-the -git-path***
 $ cd lnmiithackathon
-$ python manage.py makemigrations
-$ python manage.py migrate
-$ python manage.py runserver
+$ python manage.py makemigrations ***for-making-changes***
+$ python manage.py migrate  ***for-making-changes***
+$ python manage.py runserver    ***for-running-the-server***
 ```
 
 ### Development
