@@ -1,0 +1,65 @@
+{% extends "base.html" %} 
+{% comment %}
+
+This is the display for the 'Post Ad' form.
+
+URL: postad/  
+Model: PostAd  
+ModelForm: PostAdForm  
+View: PostAdPage [FormView]  
+View Return: HttpResponse : message - "Sweeeeeeeet."
+
+* = preset when user is logged in.
+
+{% endcomment %}
+
+{% block content %}
+<form action="/postad/" method="post">{% csrf_token %}
+    <!-- *name -->
+    {{  form.non_field_errors }}
+    <div class="fieldWrapper">
+        {{ form.name.errors }}
+        <label for="id_name">Name</label>
+        {{ form.name }}
+    </div>
+    <!-- *email -->
+    <div class="fieldWrapper">
+        {{ form.email.errors }}
+        <label for="id_email">Email</label>
+        {{ form.email }}
+    </div>
+    <!-- gist -->
+    <div class="fieldWrapper">
+        {{ form.gist.errors }}
+        <label for="id_gist">Gist</label>
+        {{ form.gist }}
+    </div>
+    <!-- category -->
+    <div class="fieldWrapper">
+        {{ form.category.errors }}
+        <label for="id_category">Category</label>
+        {{ form.category }}
+    </div>
+    <!-- location -->
+    <div class="fieldWrapper">
+        {{ form.location.errors }}
+        <label for="id_name">Location</label>
+        {{ form.location }}
+    </div>
+    <!-- description -->
+    <div class="fieldWrapper">
+        {{ form.description.errors }}
+        <label for="id_description">Description</label>
+        {{ form.description }}
+    </div>
+    <!-- expire -->
+    <div class="fieldWrapper">
+        {{ form.expire.errors }}
+        <label for="id_expire">Expire</label>
+        {{ form.expire }}
+    </div>
+    <button type="submit">
+        <i class="fa fa-thumb-tack"></i> Post
+    </button>
+</form>
+{% endblock %}
