@@ -1,4 +1,3 @@
-{% block content %}
 // Various accessors that specify the four dimensions of data to visualize.
 	function x1(d) { return d.users; }
 	function y1(d) { return d.lifeExpectancy; }
@@ -205,4 +204,3 @@
       .style("text-anchor", "end")
       .text(function(d) { return d.name;})
 	});
-{% endblock %}
